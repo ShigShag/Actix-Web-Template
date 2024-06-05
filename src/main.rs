@@ -37,6 +37,11 @@ async fn main() -> std::io::Result<()> {
         Err(_) => String::from("./static"),
     };
 
+    let garnet_path = match std::env::var("GARNET_URL") {
+        Ok(path) => path,
+        Err(_) => String::from("redis://127.0.0.1:6379"),
+    };
+
     let css_path = format!("{}/css", static_file_path);
     let js_path = format!("{}/js", static_file_path);
 
@@ -48,9 +53,7 @@ async fn main() -> std::io::Result<()> {
     // let secret_key = Key::generate();
     let secret_key = Key::derive_from(&[0; 32]);
 
-    let store = RedisSessionStore::new("redis://127.0.0.1:6379")
-        .await
-        .unwrap();
+    let store = RedisSessionStore::new(garnet_path).await.unwrap();
 
     // Create new database pool | expect is ok since server cant run without db
     let database = Arc::new(Database::new().unwrap());

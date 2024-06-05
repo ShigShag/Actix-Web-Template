@@ -50,6 +50,6 @@ cargo run --release
 ### Build docker container
 
 ```bash
-# Network adresses must be changed for this to work
+# Network addresses must be changed for this to work
 sudo docker build -t actix-web-template .
 ```
