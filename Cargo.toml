@@ -1,0 +1,29 @@
+[package]
+name = "actix-web-template"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+actix-files = "0.6.5"
+actix-session = { version = "0.9.0", features = ["redis-rs-session"] }
+actix-web = "4.5.1"
+argon2 = "0.5.3"
+blake3 = "1.5.1"
+chrono = { version = "0.4.38", features = ["serde"] }
+cookie = "0.18.1"
+diesel = { version = "2.1.5", features = ["postgres", "r2d2", "chrono", "uuid"] }
+dotenv = "0.15.0"
+env_logger = "0.11.3"
+futures-util = "0.3.30"
+log = "0.4.21"
+r2d2 = "0.8.10"
+r2d2_redis = "0.14.0"
+rand = "0.8.5"
+redis = "0.25.3"
+sanitize_html = "0.8.0"
+serde = { version = "1.0.198", features = ["derive"] }
+serde_json = "1.0.116"
+serde_millis = "0.1.1"
+tera = "1.19.1"
+uuid = { version = "1.8.0", features = ["fast-rng", "v4", "serde"] }
+

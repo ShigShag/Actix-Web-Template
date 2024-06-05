@@ -1,0 +1,34 @@
+/* css/base.css */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+header, footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #f8f9fa;
+}
+
+nav {
+  background-color: #007bff;
+  padding: 10px 20px;
+}
+
+nav a, nav button {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: inline-block;
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+footer {
+  font-size: 14px;
+  color: #666;
+}
